@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
     def show
         @item = Item.find(params[:id])
         render json: @item
+    end
 
     def create
         @item = Item.create(
@@ -33,4 +34,5 @@ class ItemsController < ApplicationController
         Item.destroy
         render json: @items
     end
+
 end
